@@ -17,8 +17,5 @@
     "require": {
         "automattic/vipwpcs": "^3.0",
         "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
-    },
-    "archive": {
-        "exclude": ["/.circleci"]
     }
 }
