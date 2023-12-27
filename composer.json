@@ -19,6 +19,6 @@
         "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
     },
     "archive": {
-        "exclude": [".circleci"]
+        "exclude": ["/.circleci"]
     }
 }
