@@ -6,7 +6,7 @@ This library contains WordPress VIP PHPCS configuration for NewsUK plugins and t
 
 Run the following command in terminal:
 ```bash
-composer require --dev newsuk/nuk-wp-phpcs
+composer require --dev newsuk/nuk-wp-phpcs-config
 ```
 
 Create a `phpcs.xml.dist` file in your project and add the following:
