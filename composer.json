@@ -1,0 +1,21 @@
+{
+    "name": "newsuk/nuk-wp-phpcs",
+    "description": "PHPCS configuration for WordPress VIP plugins and themes",
+    "type": "phpcodesniffer-standard",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Content Platforms",
+            "email": "contentplatforms@news.co.uk"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "require": {
+        "automattic/vipwpcs": "^3.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
+    }
+}
