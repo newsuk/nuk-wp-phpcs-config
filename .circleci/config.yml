@@ -17,11 +17,9 @@ jobs:
                   name: Composer validate
                   command: composer validate --strict
             - run:
-                  name: List installed phpcs standards
-                  command: vendor/bin/phpcs -i
-            - run:
-                  name: Check if NewsUK standard is installed
+                  name: Check if NewsUK PHPCS standard is installed
                   command: |
+                    vendor/bin/phpcs -i
                     if vendor/bin/phpcs -i | grep -q "NewsUK"; then
                       echo "NewsUK PHPCS standard is installed successfully."
                     else
