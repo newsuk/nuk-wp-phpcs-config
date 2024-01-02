@@ -41,3 +41,10 @@ You can also override or add custom rules to the config as follows.
 	</rule>
 </ruleset>
 ```
+## Composer scripts
+Add the following to `scripts` section in `composer.json` file to run linting.
+
+```json
+"phpcs": "phpcs .",
+"phpcbf": "phpcbf .",
+```
