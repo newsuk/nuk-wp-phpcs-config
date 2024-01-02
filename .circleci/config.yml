@@ -22,7 +22,7 @@ jobs:
             - run:
                   name: Check if NewsUK standard is installed
                   command: |
-                    if ! phpcs -i | grep -q "NewsUK"; then
+                    if ! vendor/bin/phpcs -i | grep -q "NewsUK"; then
                       echo "Error: NewsUK PHPCS standard is not installed."
                       exit 1
                     fi
