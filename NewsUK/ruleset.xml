@@ -3,10 +3,15 @@
 	<config name="minimum_supported_wp_version" value="6.2" />
 	<config name="testVersion" value="8.2-"/>
 
+	<rule ref="PHPCompatibilityWP" />
+
 	<rule ref="WordPress-Docs">
 		<severity>5</severity>
 	</rule>
 	<rule ref="WordPress-Extra">
+		<severity>5</severity>
+	</rule>
+	<rule ref="WordPress-Core">
 		<severity>5</severity>
 	</rule>
 	<rule ref="WordPress-VIP-Go">
@@ -50,6 +55,12 @@
 		<severity>0</severity>
 	</rule>
 
+	<rule ref="PSR2.Namespaces.UseDeclaration">
+		<exclude name="PSR2.Namespaces.UseDeclaration.MultipleDeclarations" />
+	</rule>
+	<rule ref="PSR2R.Namespaces.UnusedUseStatement" />
+	<rule ref="PSR2R.Namespaces.UseInAlphabeticalOrder" />
+
 	<!-- Check all PHP files in directory tree by default. -->
 	<arg name="extensions" value="php"/>
 	<file>.</file>
@@ -58,6 +69,9 @@
 	<arg value="sp"/>
 
 	<arg name="colors"/>
+
+	<!-- Check up to 20 files simultaneously. -->
+	<arg name="parallel" value="20" />
 
 	<exclude-pattern>/node_modules/*</exclude-pattern>
 	<exclude-pattern>/vendor/*</exclude-pattern>

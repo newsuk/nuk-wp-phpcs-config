@@ -23,6 +23,7 @@ Create a `phpcs.xml.dist` file in your project and add the following:
 	<rule ref="NewsUK"/>
 </ruleset>
 ```
+💡 *It is recommended to use the `NewsUK` ruleset as it is without customising or overriding rules unless necessary.*
 
 ## Override or add custom rules
 You can also override or add custom rules to the config as follows.
@@ -45,6 +46,6 @@ You can also override or add custom rules to the config as follows.
 Add the following to `scripts` section in `composer.json` file to run linting.
 
 ```json
-"phpcs": "phpcs .",
-"phpcbf": "phpcbf .",
+"lint": "phpcs .",
+"lint:fix": "phpcbf .",
 ```
