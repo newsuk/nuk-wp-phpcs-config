@@ -17,7 +17,7 @@
     "require": {
         "automattic/vipwpcs": "^3.0",
         "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
-        "phpcompatibility/phpcompatibility-wp": "*",
+        "phpcompatibility/phpcompatibility-wp": "^2.1",
         "fig-r/psr2r-sniffer": "^2.0"
     }
 }
