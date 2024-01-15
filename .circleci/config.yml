@@ -1,0 +1,32 @@
+version: 2.1
+jobs:
+    lint-php:
+        docker:
+            - image: cimg/php:8.2-node
+        steps:
+            - checkout
+            - run:
+                  name: Install production dependencies
+                  command: composer install --no-dev -o
+            - run:
+                  name: Composer validate
+                  command: composer validate --strict
+            - run:
+                  name: Check if NewsUK PHPCS standard is installed
+                  command: |
+                    vendor/bin/phpcs -i
+                    if vendor/bin/phpcs -i | grep -q "NewsUK"; then
+                      echo "NewsUK PHPCS standard is installed successfully."
+                    else
+                      echo "Error: NewsUK PHPCS standard is not installed."
+                      exit 1
+                    fi
+            - persist_to_workspace:
+                  root: .
+                  paths:
+                      - vendor
+workflows:
+    version: 2
+    build:
+        jobs:
+            - lint-php
