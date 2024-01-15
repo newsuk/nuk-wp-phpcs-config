@@ -6,11 +6,6 @@ jobs:
         steps:
             - checkout
             - run:
-                  name: Install Composer
-                  command: |
-                      curl -s https://getcomposer.org/installer | php
-                      mv composer.phar /usr/local/bin/composer
-            - run:
                   name: Install production dependencies
                   command: composer install --no-dev -o
             - run:
