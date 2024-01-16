@@ -60,7 +60,11 @@
 	</rule>
 	<rule ref="PSR2R.Namespaces.UnusedUseStatement" />
 
-	<rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes"/>
+	<rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+		<properties>
+			<property name="declareOnFirstLine" value="true"/>
+		</properties>
+	</rule>
 
 	<!-- Check all PHP files in directory tree by default. -->
 	<arg name="extensions" value="php"/>
