@@ -59,7 +59,8 @@
 		<exclude name="PSR2.Namespaces.UseDeclaration.MultipleDeclarations" />
 	</rule>
 	<rule ref="PSR2R.Namespaces.UnusedUseStatement" />
-	<rule ref="PSR2R.Namespaces.UseInAlphabeticalOrder" />
+
+	<rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes"/>
 
 	<!-- Check all PHP files in directory tree by default. -->
 	<arg name="extensions" value="php"/>
