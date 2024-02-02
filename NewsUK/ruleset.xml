@@ -62,6 +62,7 @@
 
 	<rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes"/>
 
+	<rule ref="SlevomatCodingStandard.Functions.StaticClosure" />
 	<rule ref="SlevomatCodingStandard.TypeHints.NullTypeHintOnLastPosition" />
 	<rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue" />
 	<rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly">
