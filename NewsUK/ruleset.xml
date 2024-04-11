@@ -7,6 +7,7 @@
 
 	<rule ref="WordPress-Docs">
 		<severity>5</severity>
+		<exclude-pattern>tests/*</exclude-pattern>
 	</rule>
 	<rule ref="WordPress-Extra">
 		<severity>5</severity>
@@ -16,6 +17,7 @@
 	</rule>
 	<rule ref="WordPress-VIP-Go">
 		<severity>5</severity>
+		<exclude-pattern>tests/*</exclude-pattern>
 	</rule>
 
 	<rule ref="WordPress.WP.I18n">
@@ -33,6 +35,13 @@
 		<exclude-pattern>tests/*</exclude-pattern>
 	</rule>
 
+	<rule ref="WordPress.WP.AlternativeFunctions.json_encode_json_encode">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+
+	<rule ref="WordPress.DateTime.RestrictedFunctions.date_date">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
 	<rule ref="WordPress.Files.FileName.NotHyphenatedLowercase">
 		<exclude-pattern>includes/*</exclude-pattern>
 		<exclude-pattern>inc/*</exclude-pattern>
@@ -60,13 +69,15 @@
 	</rule>
 	<rule ref="PSR2R.Namespaces.UnusedUseStatement" />
 
-	<rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes"/>
+	<rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
 
 	<rule ref="SlevomatCodingStandard.Functions.StaticClosure" />
 	<rule ref="SlevomatCodingStandard.TypeHints.NullTypeHintOnLastPosition" />
 	<rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue" />
 	<rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly">
-		 <properties>
+		<properties>
 			<property name="searchAnnotations" value="true" />
 		</properties>
 	</rule>
@@ -87,5 +98,5 @@
 	<exclude-pattern>/vendor/*</exclude-pattern>
 	<exclude-pattern>/cypress/*</exclude-pattern>
 	<exclude-pattern>/build/*</exclude-pattern>
-	<exclude-pattern>/tests/*</exclude-pattern>
+	<exclude-pattern>/tests/wp-tests-config.php</exclude-pattern>
 </ruleset>
