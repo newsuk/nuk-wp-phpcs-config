@@ -1,24 +1,25 @@
 {
     "name": "newsuk/nuk-wp-phpcs-config",
     "description": "PHPCS configuration for WordPress VIP plugins and themes",
-    "type": "phpcodesniffer-standard",
     "license": "MIT",
+    "type": "phpcodesniffer-standard",
     "authors": [
         {
             "name": "Content Platforms",
             "email": "contentplatforms@news.co.uk"
         }
     ],
+    "require": {
+        "automattic/vipwpcs": "^3.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "fig-r/psr2r-sniffer": "^2.0",
+        "phpcompatibility/phpcompatibility-wp": "^2.1",
+        "slevomat/coding-standard": "^8.14",
+        "wp-coding-standards/wpcs": "^3.1"
+    },
     "config": {
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
         }
-    },
-    "require": {
-        "automattic/vipwpcs": "^3.0",
-        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
-        "phpcompatibility/phpcompatibility-wp": "^2.1",
-        "fig-r/psr2r-sniffer": "^2.0",
-        "slevomat/coding-standard": "^8.14"
     }
 }
