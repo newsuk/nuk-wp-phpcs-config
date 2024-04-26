@@ -17,9 +17,9 @@ jobs:
                     phpcsStandards=$(vendor/bin/phpcs -i)
                     echo $phpcsStandards
                     if echo $phpcsStandards | grep -q "NewsUK" && echo $phpcsStandards | grep -q "NewsPress"; then
-                      echo "NewsUK and NewsPress PHPCS standard are installed successfully."
+                      echo "NewsUK and NewsPress PHPCS standards are installed successfully."
                     else
-                      echo "Error: NewsUK and NewsPress PHPCS standard are not installed."
+                      echo "Error: NewsUK and NewsPress PHPCS standards are not installed."
                       exit 1
                     fi
             - persist_to_workspace:
