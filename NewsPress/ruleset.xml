@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<ruleset name="NewsPress">
+	<config name="minimum_supported_wp_version" value="6.2" />
+	<config name="testVersion" value="8.2-"/>
+
+	<rule ref="PHPCompatibilityWP" />
+
+	<rule ref="WordPress-Docs">
+		<severity>5</severity>
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress-Extra">
+		<severity>5</severity>
+	</rule>
+	<rule ref="WordPress-Core">
+		<severity>5</severity>
+	</rule>
+	<rule ref="WordPress-VIP-Go">
+		<severity>5</severity>
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="newspress"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!-- Disable some sniffs that conflict with PSR-4. -->
+	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
+		<exclude-pattern>includes/*</exclude-pattern>
+		<exclude-pattern>inc/*</exclude-pattern>
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+
+	<rule ref="WordPress.WP.AlternativeFunctions.json_encode_json_encode">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+
+	<rule ref="WordPress.DateTime.RestrictedFunctions.date_date">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.Files.FileName.NotHyphenatedLowercase">
+		<exclude-pattern>includes/*</exclude-pattern>
+		<exclude-pattern>inc/*</exclude-pattern>
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+
+	<rule ref="Universal.Operators.DisallowShortTernary.Found">
+		<severity>0</severity>
+	</rule>
+
+	<rule ref="Universal.Arrays.DisallowShortArraySyntax.Found">
+		<severity>0</severity>
+	</rule>
+
+	<rule ref="WordPress.PHP.YodaConditions.NotYoda">
+		<severity>0</severity>
+	</rule>
+
+	<rule ref="PSR12.Files.FileHeader.SpacingAfterBlock">
+		<severity>0</severity>
+	</rule>
+
+	<rule ref="PSR2.Namespaces.UseDeclaration">
+		<exclude name="PSR2.Namespaces.UseDeclaration.MultipleDeclarations" />
+	</rule>
+	<rule ref="PSR2R.Namespaces.UnusedUseStatement" />
+
+	<rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+
+	<rule ref="SlevomatCodingStandard.Functions.StaticClosure" />
+	<rule ref="SlevomatCodingStandard.TypeHints.NullTypeHintOnLastPosition" />
+	<rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue" />
+	<rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly">
+		<properties>
+			<property name="searchAnnotations" value="true" />
+		</properties>
+	</rule>
+
+	<!-- Check all PHP files in directory tree by default. -->
+	<arg name="extensions" value="php"/>
+	<file>.</file>
+
+	<!-- Show sniff codes in all reports -->
+	<arg value="sp"/>
+
+	<arg name="colors"/>
+
+	<!-- Check up to 20 files simultaneously. -->
+	<arg name="parallel" value="20" />
+
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>/vendor/*</exclude-pattern>
+	<exclude-pattern>/cypress/*</exclude-pattern>
+	<exclude-pattern>/build/*</exclude-pattern>
+	<exclude-pattern>/tests/wp-tests-config.php</exclude-pattern>
+</ruleset>
