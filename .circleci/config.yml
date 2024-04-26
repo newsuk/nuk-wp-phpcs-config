@@ -15,7 +15,7 @@ jobs:
                   name: Check if NewsUK and NewsPress PHPCS standards are installed
                   command: |
                     phpcsStandards=$(vendor/bin/phpcs -i)
-                    echo phpcsStandards
+                    echo $phpcsStandards
                     if echo $phpcsStandards | grep -q "NewsUK" && echo $phpcsStandards | grep -q "NewsPress"; then
                       echo "NewsUK and NewsPress PHPCS standard are installed successfully."
                     else
