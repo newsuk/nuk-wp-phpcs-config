@@ -15,7 +15,7 @@ composer require --dev newsuk/nuk-wp-phpcs-config
 ```
 
 ## Using the ruleset
-Create a `phpcs.xml.dist` file in your project and add the following:
+Create a `phpcs.xml.dist` file in your project and add the following to use `NewsUK` ruleset:
 
 ```xml
 <?xml version="1.0"?>
@@ -23,7 +23,7 @@ Create a `phpcs.xml.dist` file in your project and add the following:
 	<rule ref="NewsUK"/>
 </ruleset>
 ```
-💡 *It is recommended to use the `NewsUK` ruleset as it is without customising or overriding rules unless necessary.*
+💡 *It is recommended to use the `NewsUK` or `NewsPress` ruleset as it is without customising or overriding rules unless necessary.*
 
 ## Override or add custom rules
 You can also override or add custom rules to the config as follows.

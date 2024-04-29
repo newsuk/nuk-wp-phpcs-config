@@ -12,13 +12,14 @@ jobs:
                   name: Composer validate
                   command: composer validate --strict
             - run:
-                  name: Check if NewsUK PHPCS standard is installed
+                  name: Check if NewsUK and NewsPress PHPCS standards are installed
                   command: |
-                    vendor/bin/phpcs -i
-                    if vendor/bin/phpcs -i | grep -q "NewsUK"; then
-                      echo "NewsUK PHPCS standard is installed successfully."
+                    phpcsStandards=$(vendor/bin/phpcs -i)
+                    echo $phpcsStandards
+                    if echo $phpcsStandards | grep -q "NewsUK" && echo $phpcsStandards | grep -q "NewsPress"; then
+                      echo "NewsUK and NewsPress PHPCS standards are installed successfully."
                     else
-                      echo "Error: NewsUK PHPCS standard is not installed."
+                      echo "Error: NewsUK and NewsPress PHPCS standards are not installed."
                       exit 1
                     fi
             - persist_to_workspace:
