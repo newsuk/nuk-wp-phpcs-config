@@ -12,6 +12,7 @@
     "require": {
         "automattic/vipwpcs": "^3.0",
         "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "ergebnis/composer-normalize": "^2.42",
         "fig-r/psr2r-sniffer": "^2.0",
         "phpcompatibility/phpcompatibility-wp": "^2.1",
         "slevomat/coding-standard": "^8.14",
@@ -19,7 +20,16 @@
     },
     "config": {
         "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "ergebnis/composer-normalize": true
         }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "composer normalize"
+        ],
+        "post-update-cmd": [
+            "composer normalize"
+        ]
     }
 }
