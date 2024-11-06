@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: nuk-wp-phpcs-config
+  description: PHPCS configuration for WordPress VIP plugins and themes.
+  tags:
+    - wordpress
+    - phpcs
+    - php
+    - lint
+    - coding-standards
+    - bu:newsuk
+  annotations:
+    circleci.com/project-slug: github/newsuk/nuk-wp-phpcs-config
+    jira/project-key: CPNT
+spec:
+  type: library
+  lifecycle: development
+  owner: group:newsuk
