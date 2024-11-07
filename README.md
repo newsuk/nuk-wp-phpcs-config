@@ -70,5 +70,5 @@ Add the following to `scripts` section in `composer.json` file to run linting.
 The content schema uses Semantic Versioning `semver` for versioning. The package is released using [GitHub Releases](https://docs.github.com/en/github/administering-a-repository/releasing-projects-on-github/about-releases). The release process is automated in Circle CI build step. To create a new release, follow these steps:
 
 -   Update the relevant files with the new version. Commit the updated files.
--   Push the changes to the master branch, by merging the associated pull request
--   Create a release targeting the `master` branch within GitHub.
+-   Push the changes to the `main` branch, by merging the associated pull request
+-   Create a release targeting the `main` branch within GitHub.
