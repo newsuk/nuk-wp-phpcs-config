@@ -67,7 +67,6 @@
 	<rule ref="PSR2.Namespaces.UseDeclaration">
 		<exclude name="PSR2.Namespaces.UseDeclaration.MultipleDeclarations" />
 	</rule>
-	<rule ref="PSR2R.Namespaces.UnusedUseStatement" />
 
 	<rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
 		<exclude-pattern>tests/*</exclude-pattern>
