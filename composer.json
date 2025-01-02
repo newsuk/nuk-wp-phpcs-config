@@ -13,7 +13,7 @@
         "automattic/vipwpcs": "^3.0",
         "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
         "ergebnis/composer-normalize": "^2.42",
-        "fig-r/psr2r-sniffer": "^2.0",
+        "fig-r/psr2r-sniffer": "^2.1.2",
         "phpcompatibility/phpcompatibility-wp": "^2.1",
         "slevomat/coding-standard": "^8.14",
         "wp-coding-standards/wpcs": "^3.1"
